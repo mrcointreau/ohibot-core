@@ -1,0 +1,28 @@
+{
+  "name": "ohibot-core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ohibot Core Library",
+  "author": "Luca Martini",
+  "license": "MIT",
+  "main": "dist/ohibotCore.cjs.js",
+  "module": "dist/ohibotCore.esm.js",
+  "devDependencies": {
+    "@babel/core": "7.1.5",
+    "@babel/preset-env": "7.1.5",
+    "jest": "^24.8.0",
+    "rollup": "0.67.1",
+    "rollup-plugin-babel": "4.0.3",
+    "rollup-plugin-eslint": "^5.0.0",
+    "rollup-plugin-terser": "3.0.0",
+    "rollup-plugin-uglify": "6.0.0"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "serve": "rollup -c rollup.config.js --environment BUILD:development -w",
+    "build": "rollup -c rollup.config.js --environment BUILD:production",
+    "build:min": "rollup -c rollup.config.js --environment BUILD:minify",
+    "dist": "rm -rf ./dist && npm run test && npm run build && npm run build:min",
+    "test": "jest"
+  }
+}
