@@ -8,7 +8,7 @@
   "main": "dist/ohibotCore.cjs.js",
   "module": "dist/ohibotCore.esm.js",
   "devDependencies": {
-    "@babel/core": "7.1.5",
+    "@babel/core": "7.20.7",
     "@babel/preset-env": "7.1.5",
     "jest": "^24.8.0",
     "rollup": "0.67.1",
